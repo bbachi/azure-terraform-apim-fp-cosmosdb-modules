@@ -27,3 +27,8 @@ output "function_app_id" {
   value = module.function-app.function_app_id
   description = "Id of the function app"
 }
+
+output "apim_gateway_url" {
+  value = module.apim.apim_gateway_url
+  description = "Gateway URL of the APIM"
+}

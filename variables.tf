@@ -21,3 +21,7 @@ variable "fn_app_service_plan_name" {
 variable "function_app_name" {
   description = "The name of the function app"
 }
+
+variable "apim_name" {
+  description = "name of the APIM"
+}

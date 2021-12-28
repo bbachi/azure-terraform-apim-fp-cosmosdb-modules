@@ -23,3 +23,13 @@ module "function-app" {
 
   depends_on = [module.cosmosdb]
 }
+
+module "apim" {
+  source = "./modules/apim"
+
+  rg-name = azurerm_resource_group.resource_group.name
+  location = azurerm_resource_group.resource_group.location
+  apim_name = var.apim_name
+
+  depends_on = [azurerm_resource_group.resource_group]
+}
